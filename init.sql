@@ -205,9 +205,9 @@ CREATE TABLE [Stocks].[StockDailyTradings]
 	[TradeDate]		DATE,
 	[StockNo]		SMALLINT,
 	
-	[High]			SMALLMONEY NOT NULL,
-	[Low]			SMALLMONEY NOT NULL,
-	[Volumn]			INT NOT NULL,
+	[High]			SMALLMONEY,
+	[Low]			SMALLMONEY,
+	[Volumn]		INT,
 	
 	CONSTRAINT [pk_StockDailyTradings]
 		PRIMARY KEY ([TradeDate],[StockNo]),
@@ -216,3 +216,11 @@ CREATE TABLE [Stocks].[StockDailyTradings]
 		REFERENCES [Stocks].[StockMains]([No])
 )
 GO
+
+INSERT INTO [Stocks].[StockDailyTradings]([TradeDate],[StockNo]) VALUES ('2018/12/13',1)
+INSERT INTO [Stocks].[StockDailyTradings]([TradeDate],[StockNo]) VALUES ('2018/12/13',2)
+INSERT INTO [Stocks].[StockDailyTradings]([TradeDate],[StockNo]) VALUES ('2018/12/13',3)
+INSERT INTO [Stocks].[StockDailyTradings]([TradeDate],[StockNo]) VALUES ('2018/12/13',4)
+INSERT INTO [Stocks].[StockDailyTradings]([TradeDate],[StockNo]) VALUES ('2018/12/13',5)
+GO
+
